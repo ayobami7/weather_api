@@ -8,7 +8,7 @@ const port = process.env.PORT || 8000
 
 app.set('trust proxy', true);
 
-app.get('/', async(req, res) =>{
+app.get('/api/hello', async(req, res) =>{
     const visitorName = req.query.visitor_name || 'Guest'
     const clientIp = req.headers['x-forwarded-for'] || req.socket.remoteAddress
     // const clientIp = req.ip
